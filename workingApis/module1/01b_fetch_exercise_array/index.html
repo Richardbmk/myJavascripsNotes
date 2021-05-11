@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Coding Train: Data/APIs 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src=''></script>
+</head>
+<body>
+    <!-- <img src="" id="img" /> -->
+    <script>
+        console.log('about to fetch a rainbow');
+
+        let images = ['img/photo1.jpg', 'img/photo2.jpg', 'img/photo3.jpg'];
+
+        catchRainbows(images).then(response => {
+            console.log('You understand it very well!! Yeah')
+        }).catch(error => {
+            console.log('error:');
+            console.log(error);
+        });
+
+        
+        catchRainbows(filenames)
+        .then(response => {
+          console.log('yay');
+        })
+        .catch(error => {
+          console.log('error!');
+          console.error(error);
+        });
+
+      async function catchRainbows(filenames) {
+        for (let filename of filenames) {
+          const response = await fetch(filename);
+          const blob = await response.blob();
+          const img = document.createElement('img');
+          img.src = URL.createObjectURL(blob);
+          img.width = '400';
+          document.body.append(img);
+        }
+      }
+
+    </script>    
+</body>
+</html>

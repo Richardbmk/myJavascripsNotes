@@ -1,0 +1,16 @@
+.sphere {
+    fill: darkblue;
+}
+
+.country {
+    fill: lightgreen;
+    stroke: black;
+    stroke-opacity: 0.3;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

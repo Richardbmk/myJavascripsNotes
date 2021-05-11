@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src=''></script>
+</head>
+<body>
+    <script>
+        getData();
+
+        async function getData(){
+            const response = await fetch('testdata.csv');
+            const data = await response.text();
+            //console.log(data);
+
+            let rows = data.split('\n').slice(14);
+            //console.log(rows);
+
+            rows.forEach(row => {
+                const columns = row.split(';');
+                //console.log(columns);
+                const date = columns[0];
+                const PIBinter = columns[1];
+                const dotPIBinter = PIBinter.replace(',', '.');
+                console.log(date, dotPIBinter);
+
+            });
+        }
+    </script>
+    
+</body>
+</html>

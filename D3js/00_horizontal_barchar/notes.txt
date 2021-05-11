@@ -1,0 +1,7 @@
+you need to install a live server in order to work with fecth
+
+You already have installed liver server, if not install 
+npm live-server
+
+in the terminal:
+> liver-server

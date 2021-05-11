@@ -1,0 +1,38 @@
+.sphere {
+    fill: darkblue;
+}
+
+.tick {
+    cursor: pointer;
+}
+.country {
+    cursor: pointer;
+}
+
+.country {
+    /* fill: lightgreen; */
+    stroke: black;
+    stroke-width: 0.1;
+}
+
+.country.highlighted {
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.country:hover{
+    fill: orange;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.tick text {
+    font-size: 1em;
+    font-family: sans-serif;
+    fill: black;
+}
