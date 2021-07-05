@@ -10,6 +10,7 @@ const movieReviews = {
 };
 Object.keys(movieReviews);
 Object.values(movieReviews);
+Object.entries(movieReviews);
 
 
 // THIS DOES NOT WORK!
